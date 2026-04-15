@@ -1,5 +1,6 @@
 # Context
 
-This little projet is part of a **POC** *(Proof Of Concept)* for a bigger (private) project.<br>
-That's why the code is commented in french language, excuse me for this.<br>
-It's also why the code is designed to **fit with Doxygen** docs auto generation.
+This projet is part of a **Proof of Concept** *(POC)* for a larger private project.<br>
+
+As a result, the code is commented in French — apologies for that.
+It is also structured to support automatic documentation generation using Doxygen.
