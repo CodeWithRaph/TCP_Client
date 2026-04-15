@@ -1,0 +1,47 @@
+# =========================
+# PROJECT
+# =========================
+PROJECT_NAME           = "TCPClient"
+PROJECT_BRIEF          = "Client TCP en C++"
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+
+# =========================
+# INPUT
+# =========================
+INPUT                  = ./src ./include
+RECURSIVE              = YES
+FILE_PATTERNS          = *.cpp *.hpp *.h
+
+# =========================
+# PARSING
+# =========================
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# =========================
+# OUTPUT FORMAT
+# =========================
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+GENERATE_DOCSET        = NO
+
+# =========================
+# STYLE / QUALITY
+# =========================
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+
+# =========================
+# GRAPH (optionnel)
+# =========================
+HAVE_DOT               = NO
+CLASS_DIAGRAMS        = NO
+CALL_GRAPH            = NO
+CALLER_GRAPH          = NO
