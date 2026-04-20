@@ -1,8 +1,6 @@
 #include "client_tcp.hpp"
 #include <iostream>
-#include <string>
 #include <sys/socket.h>
-#include <arpa/inet.h>
 #include <unistd.h>
 
 TCPClient::TCPClient(const std::string& ipAddress, int portNumber)

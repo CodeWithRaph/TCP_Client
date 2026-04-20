@@ -1,6 +1,9 @@
 #ifndef CLIENT_TCP_HPP
 #define CLIENT_TCP_HPP
 
+#include <string>
+#include <arpa/inet.h>
+
 /**
  * @brief Client TCP
  */
