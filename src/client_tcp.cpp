@@ -41,6 +41,18 @@ void TCPClient::sendMessage(const std::string& message) {
     send(sock, message.c_str(), message.length(), 0);
 }
 
+std::string TCPClient::receiveMessage() {
+    char buffer[1024];
+    int n = recv(sock, buffer, 1023, 0); // bloquant
+
+    if (n <= 0) {
+        return "";
+    }
+
+    buffer[n] = '\0';
+    return std::string(buffer);
+}
+
 void TCPClient::run() {
     std::string message;
 
@@ -49,6 +61,15 @@ void TCPClient::run() {
         std::getline(std::cin, message);
 
         sendMessage(message);
+
+        // Attend la réponse serveur
+        std::string reply = receiveMessage();
+        if (reply.empty()) {
+            std::cout << "Serveur déconnecté (ou erreur recv)." << std::endl;
+            break;
+        }
+
+        std::cout << "Réponse serveur: " << reply << std::endl;
     }
 }
 

@@ -35,6 +35,11 @@ public:
     void sendMessage(const std::string& message);
 
     /**
+     * @brief Attend une réponse du serveur (bloquant) et la retourne.
+     */
+    std::string receiveMessage();
+
+    /**
      * @brief Boucle itérative
      * Permet au client d'envoyer plusieurs message.
      * A condition que le programme reste en état d'éxécution.
